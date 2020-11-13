@@ -83,7 +83,9 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 # GRANT ACCESS RIGHT TO ADMIN 
 #=================================================
 
-yunohost app addaccess $app -u $admin
+#yunohost app addaccess $app -u $admin
+
+ynh_permission_update --permission "main" --add $admin
 
 #=================================================
 # MODIFY A CONFIG FILE
